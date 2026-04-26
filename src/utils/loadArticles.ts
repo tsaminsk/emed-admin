@@ -1,5 +1,5 @@
 export default function loadArticles(cb: (articles: any[]) => void) {
-  fetch('http://api.beinweb.ru/load_news.php')
+  fetch('https://beinweb.ru/api/load_news.php')
     .then((res) => res.json())
     .then((articles) => {
       console.log('articles', articles)
