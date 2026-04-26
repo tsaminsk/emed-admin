@@ -13,8 +13,8 @@
             class="mb-3" prefix-icon="key" aria-describedby="passwordHelp" />
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="agree">
-            <label class="form-check-label" for="agree">Я согласен с <router-link
-                to="/conditions">условиями</router-link></label>
+            <label class="form-check-label" for="agree">Я согласен с <router-link to="/conditions"
+                target="_blank">условиями</router-link></label>
           </div>
           <a href="/" class="btn btn-primary w-100">Зарегистрироваться</a>
         </form>

@@ -29,6 +29,7 @@
           <div v-else class="taskbar__favorites-empty d-flex flex-column justify-content-center align-items-center p-3">
             <i class="bi bi-folder-x"></i>
             <div class="taskbar__favorites-empty_title">Пока ничего нет</div>
+            <small>(для добавления клик ПКМ)</small>
           </div>
 
         </div>
