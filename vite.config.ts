@@ -8,6 +8,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 export default defineConfig({
   build: {
     cssMinify: 'esbuild',
+    cssTarget: 'chrome123',
   },
   plugins: [vue(), vueDevTools()],
   resolve: {

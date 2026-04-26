@@ -103,9 +103,10 @@ const adminLayout = ref<HTMLElement | null>(null)
 const colorScheme = ref<string>('light')
 const changeColorScheme = (newColorScheme: string) => {
   colorScheme.value = newColorScheme
-  if (adminLayout.value) {
-    adminLayout.value.style.setProperty('color-scheme', newColorScheme)
-  }
+  // if (adminLayout.value) {
+  //   adminLayout.value.style.setProperty('color-scheme', newColorScheme)
+  // }
+  document.documentElement.style.setProperty('color-scheme', newColorScheme)
   localStorage.setItem('color-scheme', newColorScheme)
 }
 
@@ -140,9 +141,10 @@ provide('drawerData', drawerData)
 
 onMounted(() => {
   colorScheme.value = localStorage.getItem('color-scheme') || 'light'
-  if (adminLayout.value) {
-    adminLayout.value.style.setProperty('color-scheme', colorScheme.value)
-  }
+  // if (adminLayout.value) {
+  //   adminLayout.value.style.setProperty('color-scheme', colorScheme.value)
+  // }
+  document.documentElement.style.setProperty('color-scheme', colorScheme.value)
   drawerData.drawer = document.getElementById('drawer') as any
   drawerData.offcanvas = new (window as any).bootstrap.Offcanvas(drawerData.drawer)
 })
