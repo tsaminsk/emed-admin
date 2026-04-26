@@ -1,10 +1,10 @@
 export default function loadArticles(cb: (articles: any[]) => void) {
   fetch('https://beinweb.ru/api/load_news.php')
     .then((res) => res.json())
-    .then((articles) => {
-      console.log('articles', articles)
+    .then((data) => {
+      console.log('data', data)
 
-      return articles.map((article: Record<string, any>, index: number) => ({
+      return data.articles.map((article: Record<string, any>, index: number) => ({
         id: `article-${String(index + 1)}`,
         label: article.title,
         icon: 'card-text',
